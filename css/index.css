@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600&display=swap');
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+a.follow,a.share {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: white;
+    margin-right: 10px;
+    border-radius: 20px;
+    background: #03A9F4;
+    transition: 0.3s;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a.follow:hover, a.share:hover {
+    flex: 5;
+}
+
+a.share {
+    background: white;
+    color: #717171;
+    border: 1px solid #717171;
+}
+
+.option-buttons {
+    display: flex;
+    margin-top: 10px;
+}
+
+span.small-desciption {
+    font-weight: 100;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+p.address {
+    margin-top: -10px;
+    margin-bottom: -5px;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+p.address:before {content: '@';}
+
+p.title {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+h3.num {
+    font-size: 2.5rem;
+    font-weight: 500;
+    height: 50px;
+}
+
+.post,.following,.follower {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0.5rem 0;
+}
+
+.activity {
+    display: flex;
+    flex-direction: column;
+    text-transform:uppercase;
+}
+
+p.description-text {
+    font-size: 1.2rem;
+    line-height: 32px;
+    height: 130px;
+    overflow-y: scroll;
+}
+
+p.description-text::-webkit-scrollbar {
+    width: 0px;
+}
+
+p.description-text::-webkit-scrollbar-track {
+    background: #dedede;
+}
+
+p.description-text::-webkit-scrollbar-thumb {
+    background: #717171;
+}
+
+h2.about {
+    font-size: 1.8rem;
+    font-weight: 500;
+    position: relative;
+}
+
+h2.about::first-letter {
+    text-transform: uppercase;
+}
+
+h2.about::after {content: '';position: absolute;bottom: 5px;left: 0;width: 45px;height: 4px;background: #717171;}
+
+.social-media {
+    font-size: 2rem;
+}
+
+.social-media i {
+    margin: 0 0.2rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.social-media i:hover {
+    color: #0f9bec;
+}
+
+.social-media i.active {
+    color: #0f9aec;
+}
+
+.description {
+    padding-right: 45px;
+}
+
+i.fas.fa-camera-retro {
+	position: absolute;
+	top: 50%;
+	left: 150%;
+	transform: translate(-50%,-50%);
+	font-size: 2rem;
+	color: white;
+	transition: 1s;
+}
+
+span.portrait:hover i {
+	left: 50%;
+}
+
+h1.name {
+	line-height: 3rem;
+}
+
+span.icon {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	display: block;
+	width: 25px;
+	height: 2px;
+	background: white;
+	cursor: pointer;
+}
+
+span.icon, span.icon:hover::before,span.icon:hover::after {
+	cursor: pointer;
+}
+
+span.icon:before {
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: 0;
+	display: block;
+	width: 30px;
+	height: 2px;
+	background: white;
+}
+
+span.icon:after{
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 0;
+	display: block;
+	width: 30px;
+	height: 2px;
+	background: white;
+}
+
+i.far.fa-envelope {
+	position: absolute;
+	top: 25px;
+	right: 40px;
+	font-size: 2rem;
+	color: white;
+	cursor: pointer;
+}
+
+i.far.fa-envelope:hover {
+	font-size: 2.1rem;
+}
+
+.info {
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 1rem;
+}
+
+span.portrait {
+	display: block;
+	width: 150px;
+	height: 150px;
+	background: url('/image/portrait.jpg') center / 100% no-repeat;
+	border-radius: 50%;
+	border: 2px solid #2196F3;
+	box-shadow: 0px 0px 5px white;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+span.portrait:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	clip-path: circle(0 at 135% -50%);
+	background: linear-gradient(to top, #03A9F4, transparent);
+	transition: 1s;
+}
+
+span.portrait:hover::before {
+	clip-path: circle(300px at 135% -50%);
+}
+
+div#bottom-part {
+	height: 350px;
+	padding: 1rem 2rem;
+	display: flex;
+	color: #717171;
+}
+
+div#top-part {
+	width: inherit;
+	height: 350px;
+	background: linear-gradient(to top, #00BCD4, #2196F3);
+	clip-path: circle(500px at 50% -43%);
+	position: relative;
+	border-radius: 10px;
+}
+
+div#app {
+	width: 500px;
+	height: 700px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 20px #8e8e8e;
+}
+
+.container {
+	font-family: 'Mukta', sans-serif;
+	font-size: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #fbfbfb;
+}
